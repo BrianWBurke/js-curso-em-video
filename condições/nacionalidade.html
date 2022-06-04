@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sua nacionalidade</h1>
+    Escreva em que país você nasceu (letras minusculas) <input type="text" name="país" id="país"> 
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        var txtv = window.document.querySelector('input#país')
+
+        function verificar() {
+            var txtv = window.document.querySelector('input#país')
+            var res = window.document.querySelector('div#res')
+            var nac = txtv.value
+            res.innerHTML = `<p>Você nasceu no/na <strong>${nac}</strong></p>`
+            if(nac == 'brasil') {
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong></p>` 
+            
+            } else {
+                res.innerHTML += `<p>Você é <strong>estrangeiro</strong></p>`
+            }
+            
+                    
+        }
+    </script>
+</body>
+</html>
