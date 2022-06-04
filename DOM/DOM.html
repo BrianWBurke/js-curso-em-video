@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+
+    <style>
+        body{
+            background-color: rgb(37, 37, 116);
+            color: #fff;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <stong>DOM</stong> em JAVASCRIPT.</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]       
+
+        window.document.write('No primeiro parágrafo está escrito assim:' + p1.innerText + '<br>')
+        window.document.write('No segundo parágrafo está escrito assim: ' + p2.innerText)
+
+
+        // var d = window.document.getElementById('msg') 
+        // d.innerText = 'Estou aguardando...' ouuuu, da forma seguinte:
+
+        // window.document.getElementById('msg').innerText = "Estou aguardando ...." oouuuuu com query:
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue';
+        
+
+    </script>
+</body>
+</html>
