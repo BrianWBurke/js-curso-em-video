@@ -1,2 +1,2 @@
 # js-curso-em-video
- Exercicios propostos no curso em vídeo.
+ Exercícios propostos no curso em vídeo.
