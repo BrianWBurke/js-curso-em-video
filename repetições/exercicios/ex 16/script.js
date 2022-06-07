@@ -6,30 +6,34 @@ function contar() {
     var res = document.querySelector('div#res')
 
 
+
     if (Number(num1.value) || Number(num2.value) == '') {
         res.innerHTML = `Impossivel contar!`
 
-    }else if (Number(passo.value) == 0){
+    } else if (Number(passo.value) == 0) {
         alert('Passo inválido! considerando passo: 1.')
 
+        res.innerHTML = `Contando:`
+
+        while (Number(num1.value) <= Number(num2.value)) {
+
+            res.innerHTML += `> ${num1.value}`
+
+            num1.value++
+        }
+
+
+    } else {
         res.innerHTML = `Contando:   `
-        
+
         while (Number(num1.value) <= Number(num2.value)) {
             res.innerHTML += `> ${num1.value}`
 
-            num1.value++            
-    }
-        
-
-    } else {
-            res.innerHTML = `Contando:   `
-
-            while (Number(num1.value) <= Number(num2.value)) {
-                res.innerHTML += `> ${num1.value}`
-
-                num1.value++            
+            num1.value++
         }
     }
+
+
 
 
 
