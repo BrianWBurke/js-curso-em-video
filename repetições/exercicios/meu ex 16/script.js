@@ -23,23 +23,23 @@ function contar() {
        }
         if (i < f)    {
         //contagem crescente
-        res.innerHTML = `Contando:   `
+        res.innerHTML = `Contando: \u{25B6} \u{27A1}`
 
         while (c <= f) {
-            res.innerHTML += ` ${c} >`
+            res.innerHTML += ` ${c}  \u{27A1}`
             c += p
         }
     }  else {
         //contagem regressiva
-        res.innerHTML = `Contando:   `
+        res.innerHTML = `Contando: \u{25B6} \u{27A1}`
 
         while (c >= f) {
-            res.innerHTML += ` ${c} >`
+            res.innerHTML += ` ${c}  \u{27A1}`
             c -= p
         }
     }
 
-        res.innerHTML += ` fim`
+        res.innerHTML += `\u{23F9}`
     }
 
 
