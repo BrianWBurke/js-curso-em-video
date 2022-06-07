@@ -1,36 +1,45 @@
 function contar() {
 
-    var num1 = document.getElementById('txtnum1')
-    var num2 = document.getElementById('txtnum2')
-    var passo = document.getElementById('txtpasso')
-    var res = document.querySelector('div#res')
+    let num1 = document.getElementById('txtnum1')
+    let num2 = document.getElementById('txtnum2')
+    let passo = document.getElementById('txtpasso')
+    let res = document.querySelector('div#res')
 
 
 
-    if (Number(num1.value) || Number(num2.value) == '') {
-        res.innerHTML = `Impossivel contar!`
+    if (num1.value.length == 0 || num2.value.length == 0 || passo.value.length == 0) {
+        res.innerHTML = `Impossivel contar! Informar mais dados`
 
     } else if (Number(passo.value) == 0) {
         alert('Passo inválido! considerando passo: 1.')
 
-        res.innerHTML = `Contando:`
+        let i = Number(num1.value)
+        let f = Number(num2.value)
+        let c = i
 
-        while (Number(num1.value) <= Number(num2.value)) {
-
-            res.innerHTML += `> ${num1.value}`
-
-            num1.value++
-        }
-
-
-    } else {
         res.innerHTML = `Contando:   `
 
-        while (Number(num1.value) <= Number(num2.value)) {
-            res.innerHTML += `> ${num1.value}`
-
-            num1.value++
+        while (c <= f) {
+            res.innerHTML += ` ${c} >`
+            c++
         }
+
+        res.innerHTML += ` fim`
+
+    } else {
+        let i = Number(num1.value)
+        let f = Number(num2.value)
+        let p = Number(passo.value)
+        let c = i
+
+        res.innerHTML = `Contando:   `
+
+        while (c <= f) {
+            res.innerHTML += ` ${c} >`
+            c += p
+        }
+
+        res.innerHTML += ` fim`
     }
 
 
