@@ -1,49 +1,22 @@
 function contar() {
 
-    let num1 = document.getElementById('txtnum1')
-    let num2 = document.getElementById('txtnum2')
-    let passo = document.getElementById('txtpasso')
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
     let res = document.querySelector('div#res')
 
+if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0 ) {
+window.alert('[ERRO] Faltam dados!')
+} else {
+    res.innerHTML = 'Contando: '
+    let i = Number(ini.value)
+    let f = Number(fim.value)
+    let p = Number(passo.value)
 
-
-    if (num1.value.length == 0 || num2.value.length == 0 || passo.value.length == 0) {
-        res.innerHTML = `Impossivel contar! Informar mais dados`
-
-    } else if (Number(passo.value) == 0) {
-        alert('Passo inválido! considerando passo: 1.')
-
-        let i = Number(num1.value)
-        let f = Number(num2.value)
-        let c = i
-
-        res.innerHTML = `Contando:   `
-
-        while (c <= f) {
-            res.innerHTML += ` ${c} >`
-            c++
-        }
-
-        res.innerHTML += ` fim`
-
-    } else {
-        let i = Number(num1.value)
-        let f = Number(num2.value)
-        let p = Number(passo.value)
-        let c = i
-
-        res.innerHTML = `Contando:   `
-
-        while (c <= f) {
-            res.innerHTML += ` ${c} >`
-            c += p
-        }
-
-        res.innerHTML += ` fim`
+    for(let c = i; c <= f; c += p) {
+        res.innetHTML += ` ${c} \u{27A1}`
     }
 
-
-
-
+}
 
 }
