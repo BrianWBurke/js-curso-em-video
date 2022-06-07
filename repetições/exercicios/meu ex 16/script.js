@@ -39,7 +39,6 @@ function contar() {
         }
     }
 
-
         res.innerHTML += ` fim`
     }
 
