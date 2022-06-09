@@ -27,33 +27,29 @@ function adicionar() {
 
 }
 
-function finalizar() {  
-    
-    numa.sort();  
-    
-
+function finalizar() {    
+     
     if (numa == "") {
         alert('Não foi adicionado nenhum número! Por favor adicione números de 1 a 100 na caixa acima.');
     } else {
                 
         let tam = numa.length;
-        let som = 0;
         let maior = numa[0];
         let menor = numa[0];
-        let media = 0
+        let som = 0;          
+             
         
-
+        
         for (let pos in numa) {
-            som += numa[pos];
-            if(numa[pos] > maior);
-                maior = numa[pos];
-            if (numa[pos] < menor);  
-                menor = numa[pos];       
-        }    
-                      
+            som += numa[pos];   
+            if (numa[pos] > maior) 
+                maior = numa[pos]; 
+            if (numa[pos] < menor)  
+                menor = numa[pos];        
+        }                          
         
         
-    res.innerHTML = `<p>Ao todo temos ${tam} números</p> <p>O maior valor informado foi ${numa[tam-1]}</p> <p>O menor valor informado foi ${numa[0]}</p> <p>Somando todos os valores, temos ${som}</p> <p>A media dos valores digitados é ${som/tam}</p>`;
+    res.innerHTML = `<p>Ao todo temos ${tam} números</p> <p>O maior valor informado foi ${maior}</p> <p>O menor valor informado foi ${menor}</p> <p>Somando todos os valores, temos ${som}</p> <p>A media dos valores digitados é ${som/tam}</p>`;
 }
 
 }
