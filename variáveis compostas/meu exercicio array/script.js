@@ -22,6 +22,9 @@ function adicionar() {
         res.innerHTML = '';
     }
 
+    numero.value = '';
+    numero.focus();
+
 }
 
 function finalizar() {  
